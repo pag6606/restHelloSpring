@@ -25,8 +25,9 @@ public class TopicService {
 		return repository.findById(id).get();
 	}
 
-	public void addTopic(Topic topic) {
+	public boolean addTopic(Topic topic) {
 		repository.save(topic);
+		return true;
 	}
 
 	public void updateTopic(Topic topic) {
