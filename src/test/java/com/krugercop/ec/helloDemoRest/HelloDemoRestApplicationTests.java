@@ -24,7 +24,7 @@ public class HelloDemoRestApplicationTests {
 	public void testAllTopics() {
 		List<Topic> topic = service.getAllTopics();
 		System.out.println(topic);
-		assertEquals(2, topic.size());
+		assertEquals(3, topic.size());
 	}
 
 	@Test
@@ -39,7 +39,7 @@ public class HelloDemoRestApplicationTests {
 		
 		service.deleteTopic("99");
 		List<Topic> list = service.getAllTopics();
-		assertEquals(2, list.size());
+		assertEquals(3, list.size());
 	}
 	
 	@Test
@@ -56,7 +56,7 @@ public class HelloDemoRestApplicationTests {
 		service.addTopic(new Topic("100", "Spring", "learn new features"));
 		service.deleteTopic("100");
 		List<Topic> list = service.getAllTopics();
-		assertEquals(2, list.size());
+		assertEquals(3, list.size());
 	}
 
 
